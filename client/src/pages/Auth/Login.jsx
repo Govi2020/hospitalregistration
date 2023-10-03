@@ -120,6 +120,7 @@ export default function Login() {
                 });
             }
         } catch (error) {
+            let message = ""
             if (error?.response?.data?.message) {
                 message = error?.response?.data?.message;
             } else {

@@ -1,7 +1,7 @@
 import { forwardRef, useState } from "react";
 
 const InputComponent = forwardRef(
-    ({ type = "text", placeholder = "Enter Details",maxLength=16,minLength=1 }, ref) => {
+    ({ type = "text", placeholder = "Enter Details",maxLength=50,minLength=1 }, ref) => {
 
         const [filename,setFilename] = useState("");
 

@@ -71,7 +71,7 @@ export default function Register() {
                     theme: "light",
                 }
             );
-        }else if (current_value(pincode).length > 6) {
+        }else if (current_value(pincode).length < 6) {
             toast.error(
                 "Pincode should be 6 numbers",
                 {
@@ -84,7 +84,7 @@ export default function Register() {
                     theme: "light",
                 }
             )
-        }else if (current_value(number).length > 8) {
+        }else if (current_value(number).length < 8) {
             toast.error(
                 "Phone Number should be 8 numbers",
                 {

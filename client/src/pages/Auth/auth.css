@@ -1,0 +1,7 @@
+.left {
+    background-image: url(/bg.png);
+    background-position-x: 70%;
+    background-repeat: no-repeat;
+    background-size: 350%;
+    background-color: black;
+}

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    font-family: "Poppins", sans-serif !important;
+}
+
+.btn {
+    @apply mx-auto px-10 py-3 font-bold text-white cursor-pointer bg-[#261E3B] rounded-xl;
+}
+
+.popup-content {
+    @apply border shadow-[10px_10px_10px_0px_rgba(0,0,0,0.2)] rounded-[20px] border-solid border-[#808080];
+    background: #fff;
+}
+
+.box {
+    @apply shadow-[10px_10px_20px_0px_rgba(0,0,0,0.15)] rounded-[30px] border-2 border-solid border-[#E0E0E0];
+    background: #fff;
+}
+
+.loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,46 @@
+thead {
+    border-radius: 3rem;
+    border: 1px solid transparent;
+}
+
+th {
+    padding-block : .5rem;
+    padding-inline : 1rem;
+}
+
+thead th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+thead th.last {
+    border-radius: 0 10px 10px 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #0df5e3;
+    text-align: center;
+}
+
+td,th,thead {
+    min-width: 200px;
+}
+
+td {
+    padding: 1rem;
+    text-align: center;
+    color: black !important;
+}
+
+td:nth-child(odd) {
+    color: white;
+}
+td:nth-child(even) {
+    color: #F5F5F5;
+}

@@ -16,10 +16,10 @@ const registerUser = async (req, res) => {
                 message: "Hospital already registered with this email.",
             });
         }
-        existingHospital = await Hospital.findOne({
+        existingHospital2 = await Hospital.findOne({
             registrationNumber : req.body.registrationNumber,
         });
-        if (existingHospital) {
+        if (existingHospital2) {
             return res.status(409).json({
                 message: "Hospital already registered with this registrationNumber.",
             });

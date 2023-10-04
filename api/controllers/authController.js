@@ -16,6 +16,14 @@ const registerUser = async (req, res) => {
                 message: "Hospital already registered with this email.",
             });
         }
+        existingHospital = await Hospital.findOne({
+            registrationNumber : req.body.registrationNumber,
+        });
+        if (existingHospital) {
+            return res.status(409).json({
+                message: "Hospital already registered with this registrationNumber.",
+            });
+        }
 
         // Hash the password before saving it to the database
         const hashedPassword = await bcrypt.hash(req.body.password, 10);

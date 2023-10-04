@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const loginRecordSchema = new mongoose.Schema({
   hospitalId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Hospital', // Reference to the Hospital model
+    ref: 'Hospital',
     required: true,
   },
   accessCode: {

@@ -42,7 +42,7 @@ app.use(helmet.hidePoweredBy());
 const authRoutes = require('./routes/auth');
 app.use('/auth/', authRoutes);
 
-// Include other routes (e.g., hospital routes)
+// Include other route
 const hospitalRoutes = require('./routes/hospital');
 app.use('/hospitals/', hospitalRoutes);
 

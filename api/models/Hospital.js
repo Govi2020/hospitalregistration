@@ -32,7 +32,7 @@ const hospitalSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true, // Ensure email is unique
+        unique: true,
     },
     number: {
         type: String,
@@ -41,7 +41,7 @@ const hospitalSchema = new mongoose.Schema({
     registrationNumber: {
         type: String,
         required: true,
-        unique: true, // Ensure registration number is unique
+        unique: true,
     },
     emergencyWard: {
         type: Number,

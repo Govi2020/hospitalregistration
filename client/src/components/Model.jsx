@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 function Model({ isOpen, onClose, children }) {
-    // You can manage the visibility of the popup using the 'isOpen' prop
     const popupStyle = {
         display: isOpen ? "flex" : "none",
         backgroundColor: "rgba(0, 0, 0, 0.5)"

@@ -116,7 +116,6 @@ export default function Register() {
             const certificateFileIn = certificateFile.current?.files[0];
 
             if (!certificateFileIn) {
-                // Handle the case where no file is selected
                 return;
             }
 
@@ -147,10 +146,9 @@ export default function Register() {
                 emergencyWard: current_value(emergencyWard),
                 password: current_value(password),
                 confirmPassword: current_value(confirmPassword),
-                certificateUrl: downloadURL, // Include the download URL in your data
+                certificateUrl: downloadURL,
             };
 
-            // Send a POST request to your server's API endpoint for registration
             const response = await backend.post(
                 "auth/register",
                 registrationData
@@ -158,7 +156,7 @@ export default function Register() {
 
             // Handle the response from your server
             if (response.status === 201) {
-                setIsModelOpen(true); // Show the success modal
+                setIsModelOpen(true);
             } else {
                 toast.error(
                     "Sorry Some Error Occurred",

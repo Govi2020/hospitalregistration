@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcrypt"); // For password hashing
+const bcrypt = require("bcrypt");
 const Hospital = require("../models/Hospital");
 const LoginRecord = require("../models/LoginRecord");
 

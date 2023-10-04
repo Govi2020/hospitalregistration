@@ -6,6 +6,7 @@ import Model from "../../components/Model";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase.js";
 import backend from "../../entities/axios"
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
     const hospitalName = useRef();
@@ -25,6 +26,7 @@ export default function Register() {
 
     const [isModelOpen, setIsModelOpen] = useState(false);
     const [isLoading,setIsLoading] = useState(false);
+    const navigate = useNavigate(false);
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -159,6 +161,9 @@ export default function Register() {
             // Handle the response from your server
             if (response.status === 201) {
                 setIsModelOpen(true); // Show the success modal
+                setTimeout(() => {
+                    navigate("")
+                }, 1000);
             } else {
                 toast.error(
                     "Sorry Some Error Occurred",

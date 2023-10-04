@@ -81,7 +81,7 @@ const loginUser = async (req, res) => {
             sessionID: sessionID,
         });
 
-        res.cookie("sessionId", sessionID, { httpOnly: false });
+        res.cookie("sessionId", sessionID, { httpOnly: true,secure: true });
         // Save the login record
         await loginRecord.save();
 
